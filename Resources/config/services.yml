@@ -1,0 +1,6 @@
+services:
+    waigeo_task_manager.serializer:
+            class: Waigeo\TaskManagerBundle\Service\Utils\JsonSerializer
+    waigeo_task_manager.task_execution_manager:
+        class: Waigeo\TaskManagerBundle\Service\TaskExecutionManager
+        arguments: ["@doctrine.orm.entity_manager"]
